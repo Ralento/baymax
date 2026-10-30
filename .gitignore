@@ -1,0 +1,5 @@
+.venv/
+.postgres/
+__pycache__/
+# 182 MB, pasa el límite de GitHub (100 MB). Ver README para descargarlo.
+datos/*.csv

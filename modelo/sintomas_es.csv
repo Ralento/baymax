@@ -1,0 +1,378 @@
+sintoma,nombre,frases
+anxiety and nervousness,Ansiedad y nerviosismo,ansiedad|ansios*|nervios|angustia
+depression,Depresión,depresi*|deprimid*|tristeza profunda|muy triste
+shortness of breath,Falta de aire,falta de aire|me falta el aire|me quedo sin aire|ahogo|me ahogo
+depressive or psychotic symptoms,Síntomas depresivos o psicóticos,síntomas psicóticos|psicosis|pensamientos extraños
+sharp chest pain,Dolor punzante en el pecho,dolor punzante en el pecho|piquete en el pecho|dolor fuerte en el pecho|dolor de pecho|dolor en el pecho
+dizziness,Mareo,mareo*|maread*|vértigo|todo me da vueltas
+insomnia,Insomnio,insomnio|no puedo dormir|no duermo|me cuesta dormir
+abnormal involuntary movements,Movimientos involuntarios,movimientos involuntarios|temblor*|tiemblo|tics
+chest tightness,Opresión en el pecho,opresión en el pecho|pecho apretado|presión en el pecho
+palpitations,Palpitaciones,palpitaciones|siento el corazón|corazón acelerado
+irregular heartbeat,Latido irregular,latido irregular|arritmia|corazón irregular
+breathing fast,Respiración rápida,respiro rápido|respiración rápida|respiración acelerada|jadeo
+hoarse voice,Voz ronca,ronquera|voz ronca|afon*
+sore throat,Dolor de garganta,dolor de garganta|me duele la garganta|garganta inflamada
+difficulty speaking,Dificultad para hablar,dificultad para hablar|no puedo hablar|me cuesta hablar
+cough,Tos,tos|toso|tosiendo
+nasal congestion,Congestión nasal,congestión nasal|nariz tapada|nariz congestionada
+throat swelling,Garganta hinchada,garganta hinchada|hinchazón en la garganta
+diminished hearing,Pérdida de audición,no escucho bien|escucho menos|pérdida de audición|sordera
+lump in throat,Bulto en la garganta,bulto en la garganta|nudo en la garganta
+throat feels tight,Garganta apretada,garganta apretada|garganta cerrada|se me cierra la garganta
+difficulty in swallowing,Dificultad para tragar,dificultad para tragar|me cuesta tragar|no puedo tragar|duele al tragar
+skin swelling,Piel hinchada,piel hinchada|hinchazón en la piel
+retention of urine,Retención de orina,no puedo orinar|retención de orina|me cuesta orinar
+groin mass,Bulto en la ingle,bulto en la ingle|bola en la ingle
+leg pain,Dolor de pierna,dolor de pierna|me duele la pierna|me duelen las piernas|dolor en las piernas|dolor en la pierna
+hip pain,Dolor de cadera,dolor de cadera|me duele la cadera
+suprapubic pain,Dolor arriba del pubis,dolor arriba del pubis|dolor en el pubis|dolor suprapúbico
+blood in stool,Sangre en las heces,sangre en las heces|sangre en el excremento|popó con sangre|heces con sangre
+lack of growth,Falta de crecimiento,no crece|falta de crecimiento
+emotional symptoms,Síntomas emocionales,cambios de humor|emocionalmente|lloro mucho
+elbow weakness,Debilidad en el codo,debilidad en el codo
+back weakness,Debilidad en la espalda,debilidad en la espalda|espalda débil
+pus in sputum,Pus en la flema,flema con pus|pus en la flema|flema verde|flema amarilla
+symptoms of the scrotum and testes,Molestias en escroto y testículos,molestia en los testículos|molestias en el escroto
+swelling of scrotum,Escroto hinchado,escroto hinchado|testículos hinchados|hinchazón en el escroto
+pain in testicles,Dolor de testículos,dolor de testículos|dolor en los testículos|me duelen los testículos
+flatulence,Gases,gases|flatulencia
+pus draining from ear,Pus en el oído,pus en el oído|me sale pus del oído|supura el oído
+jaundice,Piel amarilla (ictericia),ictericia|piel amarilla|ojos amarillos
+mass in scrotum,Bulto en el escroto,bulto en el escroto|bolita en el testículo|bulto en el testículo
+white discharge from eye,Secreción blanca del ojo,lagañas|legañas|secreción en el ojo|pus en el ojo
+irritable infant,Bebé irritable,bebé irritable|bebé llora mucho|bebé no deja de llorar
+abusing alcohol,Abuso de alcohol,tomo mucho alcohol|bebo mucho|abuso de alcohol|alcoholismo
+fainting,Desmayo,desmay*|perdí el conocimiento|me desvanecí
+hostile behavior,Conducta hostil,agresiv*|hostil
+drug abuse,Abuso de drogas,drogas|consumo de drogas
+sharp abdominal pain,Dolor abdominal punzante,dolor punzante en el abdomen|dolor fuerte de estómago|piquete en el estómago|dolor abdominal|dolor de estómago|dolor de panza|me duele el estómago|me duele la panza
+feeling ill,Malestar general,me siento mal|malestar|me siento enferm*
+vomiting,Vómito,vómito*|vomit*
+headache,Dolor de cabeza,dolor de cabeza|me duele la cabeza|cefalea|jaqueca
+nausea,Náusea,náusea*|ganas de vomitar|asco|revuelto el estómago
+diarrhea,Diarrea,diarrea|evacuaciones líquidas
+vaginal itching,Comezón vaginal,comezón vaginal|comezón en la vagina|picazón vaginal
+vaginal dryness,Resequedad vaginal,resequedad vaginal|sequedad vaginal
+painful urination,Dolor al orinar,dolor al orinar|ardor al orinar|me arde al orinar|arde al orinar|duele al orinar
+involuntary urination,Orina involuntaria,se me sale la orina|incontinencia urinaria|me orino sin querer
+pain during intercourse,Dolor en relaciones sexuales,dolor al tener relaciones|dolor durante el sexo|relaciones dolorosas
+frequent urination,Orinar frecuentemente,orino mucho|orino seguido|orinar frecuente|orino a cada rato|ganas de orinar
+lower abdominal pain,Dolor en el bajo vientre,dolor en el bajo vientre|dolor en la parte baja del abdomen|bajo vientre
+vaginal discharge,Flujo vaginal,flujo vaginal|secreción vaginal
+blood in urine,Sangre en la orina,sangre en la orina|orina con sangre|orino sangre
+hot flashes,Bochornos,bochorno*|sofoco*
+intermenstrual bleeding,Sangrado entre reglas,sangrado entre reglas|sangro entre periodos|manchado entre reglas
+hand or finger pain,Dolor de mano o dedos,dolor de mano|me duele la mano|dolor en los dedos|me duelen los dedos
+wrist pain,Dolor de muñeca,dolor de muñeca|me duele la muñeca
+hand or finger swelling,Mano o dedos hinchados,mano hinchada|manos hinchadas|dedos hinchados
+arm pain,Dolor de brazo,dolor de brazo|me duele el brazo|dolor en el brazo
+wrist swelling,Muñeca hinchada,muñeca hinchada
+arm stiffness or tightness,Rigidez en el brazo,brazo rígido|rigidez en el brazo
+arm swelling,Brazo hinchado,brazo hinchado
+hand or finger stiffness or tightness,Rigidez en mano o dedos,dedos rígidos|mano rígida|rigidez en los dedos
+wrist stiffness or tightness,Rigidez en la muñeca,muñeca rígida|rigidez en la muñeca
+lip swelling,Labios hinchados,labios hinchados|labio hinchado
+toothache,Dolor de muela,dolor de muela|dolor de diente|me duele una muela|dolor dental
+abnormal appearing skin,Piel con aspecto anormal,piel rara|piel extraña|cambio en la piel
+skin lesion,Lesión en la piel,lesión en la piel|herida en la piel|llaga en la piel
+acne or pimples,Acné o granos,acné|granos|espinillas|barros
+dry lips,Labios secos,labios secos|labios partidos|labios resecos
+facial pain,Dolor facial,dolor de cara|dolor en la cara|dolor facial
+mouth ulcer,Úlcera en la boca,llaga en la boca|úlcera en la boca|afta*|fuegos en la boca
+skin growth,Crecimiento en la piel,bolita en la piel|crecimiento en la piel|bulto en la piel
+eye deviation,Desviación del ojo,ojo desviado|desviación del ojo
+diminished vision,Visión disminuida,veo menos|visión disminuida|pérdida de visión|no veo bien
+double vision,Visión doble,visión doble|veo doble
+cross-eyed,Bizquera,bizco|bizca|estrabismo
+symptoms of eye,Molestias en los ojos,molestia en los ojos|molestias en los ojos|problema en el ojo
+pain in eye,Dolor de ojo,dolor de ojo|dolor en el ojo|me duele el ojo|me duelen los ojos|dolor detrás de los ojos
+eye moves abnormally,Movimiento anormal del ojo,el ojo se mueve solo|movimiento raro del ojo|nistagmo
+abnormal movement of eyelid,Movimiento anormal del párpado,me brinca el ojo|me tiembla el párpado|tic en el ojo
+foreign body sensation in eye,Sensación de algo en el ojo,algo en el ojo|basura en el ojo|arena en el ojo
+irregular appearing scalp,Cuero cabelludo irregular,cuero cabelludo raro|cuero cabelludo irregular
+swollen lymph nodes,Ganglios inflamados,ganglio*|bolitas en el cuello
+back pain,Dolor de espalda,dolor de espalda|me duele la espalda
+neck pain,Dolor de cuello,dolor de cuello|me duele el cuello|dolor de nuca
+low back pain,Dolor de espalda baja,dolor de espalda baja|dolor lumbar|dolor de cintura|me duele la cintura|lumbago
+pain of the anus,Dolor en el ano,dolor en el ano|dolor anal|me duele el ano
+pain during pregnancy,Dolor en el embarazo,dolor en el embarazo|dolor estando embarazada
+pelvic pain,Dolor pélvico,dolor pélvico|dolor en la pelvis
+impotence,Impotencia,impotencia|disfunción eréctil|no tengo erección
+infant spitting up,Bebé regurgita,bebé vomita|bebé regurgita|bebé devuelve la leche
+vomiting blood,Vómito con sangre,vómito con sangre|vomito sangre|vomité sangre
+regurgitation,Regurgitación,regurgit*|se me regresa la comida|me regresa la comida
+burning abdominal pain,Ardor en el estómago,ardor en el estómago|me arde el estómago|ardor de estómago
+restlessness,Inquietud,inquiet*|no me puedo estar quieto
+symptoms of infants,Molestias en el bebé,mi bebé|el bebé
+wheezing,Sibilancias,silbido al respirar|silbido en el pecho|sibilancia*|chiflido en el pecho
+peripheral edema,Hinchazón de pies y piernas,pies hinchados|tobillos hinchados|piernas hinchadas|edema*
+neck mass,Bulto en el cuello,bulto en el cuello|bola en el cuello
+ear pain,Dolor de oído,dolor de oído|me duele el oído|dolor en el oído|dolor de oídos
+jaw swelling,Mandíbula hinchada,mandíbula hinchada|quijada hinchada
+mouth dryness,Boca seca,boca seca|resequedad en la boca
+neck swelling,Cuello hinchado,cuello hinchado
+knee pain,Dolor de rodilla,dolor de rodilla|me duele la rodilla|me duelen las rodillas
+foot or toe pain,Dolor de pie,dolor de pie|me duele el pie|me duelen los pies|dolor en el pie|dolor en los pies
+bowlegged or knock-kneed,Piernas arqueadas o rodillas juntas,piernas arqueadas|piernas chuecas|rodillas juntas
+ankle pain,Dolor de tobillo,dolor de tobillo|me duele el tobillo
+bones are painful,Dolor de huesos,dolor de huesos|me duelen los huesos
+knee weakness,Debilidad en la rodilla,rodilla débil|debilidad en la rodilla
+elbow pain,Dolor de codo,dolor de codo|me duele el codo
+knee swelling,Rodilla hinchada,rodilla hinchada
+skin moles,Lunares,lunar*
+knee lump or mass,Bulto en la rodilla,bulto en la rodilla
+weight gain,Aumento de peso,subí de peso|aumento de peso|engordé
+problems with movement,Problemas de movimiento,me cuesta moverme|problemas para moverme|dificultad para moverme
+knee stiffness or tightness,Rigidez en la rodilla,rodilla rígida|rigidez en la rodilla
+leg swelling,Pierna hinchada,pierna hinchada|piernas hinchadas
+foot or toe swelling,Pie hinchado,pie hinchado|pies hinchados|dedo del pie hinchado
+heartburn,Agruras,agruras|acidez|reflujo
+smoking problems,Tabaquismo,fumo|fumador*|fumadora|tabaquismo|cigarro*
+muscle pain,Dolor muscular,dolor muscular|dolores musculares|dolor de músculos|me duelen los músculos
+infant feeding problem,Bebé no come bien,bebé no come|bebé no quiere comer|bebé no se alimenta
+recent weight loss,Pérdida de peso reciente,bajé de peso|perdí peso|pérdida de peso|adelgacé
+problems with shape or size of breast,Cambio en forma o tamaño del seno,cambio de tamaño del seno|cambio en la forma del seno
+underweight,Bajo peso,bajo peso|muy delgad*|peso bajo
+difficulty eating,Dificultad para comer,dificultad para comer|me cuesta comer|no puedo comer
+scanty menstrual flow,Regla escasa,regla escasa|menstruación escasa
+vaginal pain,Dolor vaginal,dolor vaginal|dolor en la vagina
+vaginal redness,Enrojecimiento vaginal,vagina roja|enrojecimiento vaginal
+vulvar irritation,Irritación vulvar,irritación en la vulva|vulva irritada
+weakness,Debilidad,debilidad|débil|sin fuerzas
+decreased heart rate,Ritmo cardiaco bajo,pulso bajo|latidos lentos|bradicardia|corazón lento
+increased heart rate,Ritmo cardiaco alto,pulso acelerado|taquicardia|corazón acelerado|corazón rápido
+bleeding or discharge from nipple,Sangrado o secreción del pezón,secreción del pezón|sangrado del pezón|sale líquido del pezón
+ringing in ear,Zumbido en el oído,zumbido en el oído|zumbido en los oídos|tinnitus|me zumba el oído|me zumban los oídos
+plugged feeling in ear,Oído tapado,oído tapado|oídos tapados|tapado el oído
+itchy ear(s),Comezón en el oído,comezón en el oído|me pica el oído|comezón en los oídos
+frontal headache,Dolor de cabeza frontal,dolor en la frente|dolor de frente
+fluid in ear,Líquido en el oído,líquido en el oído|agua en el oído
+neck stiffness or tightness,Cuello rígido,cuello rígido|cuello tieso|tortícolis|rigidez en el cuello|rigidez de nuca
+spots or clouds in vision,Manchas en la visión,manchas en la vista|veo manchas|moscas en la vista|veo puntos
+eye redness,Ojos rojos,ojos rojos|ojo rojo|enrojecimiento de los ojos|ojos irritados
+lacrimation,Lagrimeo,lagrimeo|ojos llorosos|me lloran los ojos
+itchiness of eye,Comezón en los ojos,comezón en los ojos|me pican los ojos|picazón en los ojos|comezón en el ojo|me pica el ojo
+blindness,Ceguera,ceguera|no veo nada|perdí la vista
+eye burns or stings,Ardor en los ojos,ardor en los ojos|me arden los ojos|me arde el ojo
+itchy eyelid,Comezón en el párpado,comezón en el párpado|me pica el párpado
+feeling cold,Sensación de frío,tengo frío|siento frío|mucho frío
+decreased appetite,Poco apetito,sin apetito|poco apetito|no tengo hambre|falta de apetito|pérdida de apetito|no me da hambre
+excessive appetite,Hambre excesiva,mucha hambre|hambre excesiva|hambre todo el tiempo
+excessive anger,Enojo excesivo,me enojo mucho|enojo|coraje
+loss of sensation,Pérdida de sensibilidad,no siento|pérdida de sensibilidad|entumecimiento|entumid*
+focal weakness,Debilidad en un lado del cuerpo,debilidad de un lado|un lado del cuerpo|no puedo mover el brazo|no puedo mover la pierna
+slurring words,Habla arrastrada,arrastro las palabras|habla arrastrada|lengua trabada
+symptoms of the face,Molestias en la cara,molestia en la cara|cara hinchada|cara chueca
+disturbance of memory,Problemas de memoria,se me olvidan las cosas|pérdida de memoria|problemas de memoria|mala memoria
+paresthesia,Hormigueo,hormigueo|cosquilleo|adormecimiento|se me duerme
+side pain,Dolor de costado,dolor de costado|dolor en el costado|me duele el costado
+fever,Fiebre,fiebre|temperatura alta|calentura|febr*
+shoulder pain,Dolor de hombro,dolor de hombro|me duele el hombro
+shoulder stiffness or tightness,Rigidez en el hombro,hombro rígido|rigidez en el hombro|hombro congelado
+shoulder weakness,Debilidad en el hombro,hombro débil|debilidad en el hombro
+arm cramps or spasms,Calambres en el brazo,calambre en el brazo|calambres en los brazos|espasmo en el brazo
+shoulder swelling,Hombro hinchado,hombro hinchado
+tongue lesions,Lesiones en la lengua,llaga en la lengua|herida en la lengua|lesión en la lengua
+leg cramps or spasms,Calambres en la pierna,calambre en la pierna|calambres en las piernas|calambre en la pantorrilla
+abnormal appearing tongue,Lengua de aspecto anormal,lengua blanca|lengua rara|lengua manchada
+ache all over,Dolor en todo el cuerpo,dolor de cuerpo|me duele todo|me duele el cuerpo|cuerpo cortado|dolor en todo el cuerpo
+lower body pain,Dolor en la parte baja del cuerpo,dolor en la parte baja del cuerpo|dolor de la cintura para abajo
+problems during pregnancy,Problemas en el embarazo,problemas en el embarazo|complicación del embarazo|estoy embarazada
+spotting or bleeding during pregnancy,Sangrado en el embarazo,sangrado en el embarazo|sangro estando embarazada|manchado en el embarazo
+cramps and spasms,Calambres y espasmos,calambre*|espasmo*
+upper abdominal pain,Dolor en la boca del estómago,boca del estómago|dolor en la parte alta del abdomen|dolor arriba del ombligo
+stomach bloating,Estómago inflamado,estómago inflamado|panza inflamada|inflamación del estómago|hinchazón de estómago|me siento inflamad*
+changes in stool appearance,Cambios en las heces,heces raras|popó rara|cambio en las heces|heces de otro color
+unusual color or odor to urine,Orina de color u olor raro,orina oscura|orina con mal olor|orina turbia|orina de color raro
+kidney mass,Masa en el riñón,bulto en el riñón|masa en el riñón
+swollen abdomen,Abdomen hinchado,abdomen hinchado|panza hinchada|vientre hinchado
+symptoms of prostate,Molestias en la próstata,próstata
+leg stiffness or tightness,Rigidez en la pierna,pierna rígida|piernas rígidas|rigidez en las piernas
+difficulty breathing,Dificultad para respirar,dificultad para respirar|no puedo respirar|me cuesta respirar|respiro con dificultad
+rib pain,Dolor de costillas,dolor de costillas|me duelen las costillas|dolor en las costillas
+joint pain,Dolor de articulaciones,dolor de articulaciones|dolor articular|me duelen las articulaciones|dolor en las articulaciones|dolor de coyunturas
+muscle stiffness or tightness,Rigidez muscular,rigidez muscular|músculos rígidos|músculos tensos
+pallor,Palidez,pálid*|palidez
+hand or finger lump or mass,Bulto en mano o dedo,bulto en la mano|bulto en el dedo|bolita en el dedo
+chills,Escalofríos,escalofrío*
+groin pain,Dolor de ingle,dolor de ingle|dolor en la ingle|me duele la ingle
+fatigue,Fatiga,fatiga|cansancio|cansad*|agotad*|agotamiento
+abdominal distention,Distensión abdominal,distensión abdominal|abdomen distendido|panza inflamada
+regurgitation.1,Regurgitación,regurgit*|se me regresa la comida|me regresa la comida
+symptoms of the kidneys,Molestias en los riñones,dolor de riñones|me duelen los riñones|molestia en los riñones
+melena,Heces negras,heces negras|popó negra|excremento negro
+flushing,Enrojecimiento de la cara,cara roja|rubor|me pongo rojo|me pongo roja
+coughing up sputum,Tos con flema,flema*|gargajo*
+seizures,Convulsiones,convulsi*|ataque epiléptico|crisis epiléptica
+delusions or hallucinations,Delirios o alucinaciones,alucin*|delirio*|veo cosas que no están|escucho voces
+shoulder cramps or spasms,Calambres en el hombro,calambre en el hombro|espasmo en el hombro
+joint stiffness or tightness,Rigidez en articulaciones,articulaciones rígidas|rigidez en las articulaciones|rigidez articular|rigidez matutina
+pain or soreness of breast,Dolor en los senos,dolor en el seno|dolor en los senos|me duelen los senos|senos adoloridos
+excessive urination at night,Orinar mucho de noche,orino mucho de noche|me levanto a orinar|orinar en la noche|nicturia
+bleeding from eye,Sangrado del ojo,sangrado del ojo|sangre en el ojo|ojo con sangre
+rectal bleeding,Sangrado rectal,sangrado rectal|sangrado por el ano|sangro del ano
+constipation,Estreñimiento,estreñ*|no puedo ir al baño|no evacuo
+temper problems,Problemas de temperamento,mal genio|mal humor
+coryza,Escurrimiento nasal,escurrimiento nasal|mocos|moquera|me escurre la nariz
+wrist weakness,Debilidad en la muñeca,muñeca débil|debilidad en la muñeca
+eye strain,Vista cansada,vista cansada|ojos cansados|cansancio visual
+hemoptysis,Toser sangre,toso sangre|tos con sangre|escupo sangre|flema con sangre
+lymphedema,Linfedema,linfedema
+skin on leg or foot looks infected,Infección en la piel de pierna o pie,pie infectado|pierna infectada|herida infectada en el pie|herida infectada en la pierna
+allergic reaction,Reacción alérgica,reacción alérgica|alergia|alérgic*
+congestion in chest,Pecho congestionado,pecho congestionado|congestión en el pecho|flemas en el pecho
+muscle swelling,Músculo hinchado,músculo hinchado|músculos hinchados|hinchazón muscular
+pus in urine,Pus en la orina,pus en la orina|orina con pus
+abnormal size or shape of ear,Oreja de forma anormal,oreja deforme|forma rara de la oreja
+low back weakness,Debilidad en la espalda baja,debilidad en la cintura|debilidad lumbar
+sleepiness,Somnolencia,somnolencia|mucho sueño|sueño todo el día|adormilad*
+apnea,Apnea,apnea|dejo de respirar dormid*|ronquido*
+abnormal breathing sounds,Ruidos al respirar,ruido al respirar|ruidos al respirar|estertores
+excessive growth,Crecimiento excesivo,crecimiento excesivo|crece demasiado
+elbow cramps or spasms,Calambres en el codo,calambre en el codo
+feeling hot and cold,Sensación de calor y frío,calor y frío|frío y calor
+blood clots during menstrual periods,Coágulos en la regla,coágulos en la regla|coágulos en la menstruación|coágulo*
+absence of menstruation,Ausencia de regla,no me baja|no me ha bajado|no me llega la regla|falta de regla|amenorrea|no menstrúo
+pulling at ears,Se jala las orejas,se jala la oreja|se jala las orejas|se toca el oído
+gum pain,Dolor de encías,dolor de encías|me duelen las encías
+redness in ear,Oreja roja,oreja roja|oído rojo
+fluid retention,Retención de líquidos,retención de líquidos|retengo líquidos
+flu-like syndrome,Síntomas de gripe,gripa|gripe|síntomas de gripe
+sinus congestion,Senos nasales congestionados,sinusitis|senos nasales tapados|senos nasales congestionados|presión en la cara
+painful sinuses,Dolor de senos nasales,dolor de senos nasales|dolor en los senos nasales|dolor en los pómulos
+fears and phobias,Miedos y fobias,fobia*|miedo intenso|miedos
+recent pregnancy,Embarazo reciente,acabo de dar a luz|parto reciente|embarazo reciente|di a luz
+uterine contractions,Contracciones uterinas,contracciones
+burning chest pain,Ardor en el pecho,ardor en el pecho|me arde el pecho
+back cramps or spasms,Calambres en la espalda,calambre en la espalda|espasmo en la espalda
+stiffness all over,Rigidez en todo el cuerpo,rigidez en todo el cuerpo|cuerpo tieso|todo el cuerpo rígido
+"muscle cramps, contractures, or spasms",Calambres musculares,calambre muscular|calambres musculares|contractura|espasmo muscular
+low back cramps or spasms,Calambres en la espalda baja,calambre en la cintura|espasmo lumbar
+back mass or lump,Bulto en la espalda,bulto en la espalda|bola en la espalda
+nosebleed,Sangrado de nariz,sangrado de nariz|me sangra la nariz|sangre de la nariz|hemorragia nasal|epistaxis
+long menstrual periods,Reglas largas,regla larga|reglas largas|me dura mucho la regla
+heavy menstrual flow,Regla abundante,regla abundante|sangro mucho en la regla|menstruación abundante
+unpredictable menstruation,Regla irregular,regla irregular|menstruación irregular|reglas irregulares
+painful menstruation,Cólicos menstruales,cólicos menstruales|regla dolorosa|dolor de regla|menstruación dolorosa
+infertility,Infertilidad,infertilidad|no puedo embarazarme|no me puedo embarazar
+frequent menstruation,Regla frecuente,regla muy seguido|me baja muy seguido|regla frecuente
+sweating,Sudoración,sudo|sudor*
+mass on eyelid,Bulto en el párpado,bulto en el párpado|orzuelo|perrilla|chalazión
+swollen eye,Ojo hinchado,ojo hinchado|ojos hinchados
+eyelid swelling,Párpado hinchado,párpado hinchado|párpados hinchados
+eyelid lesion or rash,Lesión en el párpado,lesión en el párpado|ronchas en el párpado
+unwanted hair,Vello excesivo,vello excesivo|mucho vello|exceso de vello|hirsutismo
+symptoms of bladder,Molestias en la vejiga,vejiga
+irregular appearing nails,Uñas anormales,uñas raras|uñas deformes|uñas quebradizas|uñas amarillas
+itching of skin,Comezón en la piel,comezón|me pica la piel|picazón en la piel|prurito
+hurts to breath,Dolor al respirar,dolor al respirar|me duele al respirar|duele respirar
+nailbiting,Morderse las uñas,me muerdo las uñas|muerdo las uñas
+"skin dryness, peeling, scaliness, or roughness",Piel seca o descamada,piel seca|piel reseca|piel escamosa|se me pela la piel|descamación
+skin on arm or hand looks infected,Infección en piel de brazo o mano,mano infectada|brazo infectado|herida infectada en la mano
+skin irritation,Irritación de la piel,piel irritada|irritación en la piel
+itchy scalp,Comezón en el cuero cabelludo,comezón en la cabeza|me pica la cabeza|comezón en el cuero cabelludo
+hip swelling,Cadera hinchada,cadera hinchada
+incontinence of stool,Incontinencia fecal,se me sale la popó|incontinencia fecal
+foot or toe cramps or spasms,Calambres en el pie,calambre en el pie|calambres en los pies
+warts,Verrugas,verruga*
+bumps on penis,Bultos en el pene,bultos en el pene|granos en el pene|bolitas en el pene
+too little hair,Caída de cabello,caída de cabello|se me cae el pelo|se me cae el cabello|calvicie|alopecia
+foot or toe lump or mass,Bulto en el pie,bulto en el pie|juanete*
+skin rash,Sarpullido,sarpullido|salpullido|ronchas|erupción|manchas en la piel|rash
+mass or swelling around the anus,Bulto en el ano,bulto en el ano|hemorroides|almorranas
+low back swelling,Hinchazón en la espalda baja,hinchazón en la cintura|espalda baja hinchada
+ankle swelling,Tobillo hinchado,tobillo hinchado|tobillos hinchados
+hip lump or mass,Bulto en la cadera,bulto en la cadera
+drainage in throat,Escurrimiento en la garganta,escurrimiento en la garganta|moco en la garganta|flema en la garganta
+dry or flaky scalp,Caspa,caspa|cuero cabelludo seco
+premenstrual tension or irritability,Síndrome premenstrual,síndrome premenstrual|antes de la regla
+feeling hot,Sensación de calor,tengo calor|siento calor|mucho calor
+feet turned in,Pies hacia dentro,pies hacia dentro|pies chuecos
+foot or toe stiffness or tightness,Rigidez en el pie,pie rígido|rigidez en el pie
+pelvic pressure,Presión pélvica,presión en la pelvis|presión pélvica
+elbow swelling,Codo hinchado,codo hinchado
+elbow stiffness or tightness,Rigidez en el codo,codo rígido|rigidez en el codo
+early or late onset of menopause,Menopausia temprana o tardía,menopausia
+mass on ear,Bulto en la oreja,bulto en la oreja|bolita en la oreja
+bleeding from ear,Sangrado del oído,sangrado del oído|me sangra el oído|sangre del oído
+hand or finger weakness,Debilidad en mano o dedos,mano débil|debilidad en la mano|debilidad en los dedos
+low self-esteem,Baja autoestima,baja autoestima|me siento inútil|no valgo nada
+throat irritation,Irritación de garganta,garganta irritada|irritación de garganta|carraspera|picor de garganta
+itching of the anus,Comezón en el ano,comezón en el ano|me pica el ano
+swollen or red tonsils,Anginas inflamadas,anginas|amígdalas inflamadas|amígdalas rojas|amigdalitis
+irregular belly button,Ombligo anormal,ombligo raro|bulto en el ombligo|hernia en el ombligo
+swollen tongue,Lengua hinchada,lengua hinchada
+lip sore,Llaga en el labio,llaga en el labio|herida en el labio|fuego en el labio|herpes labial
+vulvar sore,Llaga en la vulva,llaga en la vulva|herida en la vulva
+hip stiffness or tightness,Rigidez en la cadera,cadera rígida|rigidez en la cadera
+mouth pain,Dolor de boca,dolor de boca|me duele la boca
+arm weakness,Debilidad en el brazo,brazo débil|debilidad en el brazo
+leg lump or mass,Bulto en la pierna,bulto en la pierna
+disturbance of smell or taste,Pérdida de olfato o gusto,no huelo|perdí el olfato|pérdida del olfato|pérdida de olfato|sin olfato|perdí el gusto|sin sabor|no siento sabor
+discharge in stools,Moco en las heces,moco en las heces|popó con moco
+penis pain,Dolor de pene,dolor de pene|dolor en el pene|me duele el pene
+loss of sex drive,Poco deseo sexual,sin deseo sexual|poco deseo sexual|libido baja
+obsessions and compulsions,Obsesiones y compulsiones,obsesi*|compulsi*|trastorno obsesivo
+antisocial behavior,Conducta antisocial,antisocial|no quiero ver a nadie
+neck cramps or spasms,Calambres en el cuello,calambre en el cuello|espasmo en el cuello
+pupils unequal,Pupilas desiguales,pupilas desiguales|una pupila más grande
+poor circulation,Mala circulación,mala circulación|pies fríos|manos frías|várices
+thirst,Sed,mucha sed|sed excesiva|sed constante|tengo sed|siempre tengo sed
+sleepwalking,Sonambulismo,sonámbul*
+skin oiliness,Piel grasosa,piel grasosa|cara grasosa|piel grasa
+sneezing,Estornudos,estornud*
+bladder mass,Masa en la vejiga,bulto en la vejiga|masa en la vejiga
+knee cramps or spasms,Calambres en la rodilla,calambre en la rodilla
+premature ejaculation,Eyaculación precoz,eyaculación precoz
+leg weakness,Debilidad en las piernas,piernas débiles|pierna débil|debilidad en las piernas|no me sostienen las piernas
+posture problems,Problemas de postura,mala postura|joroba|encorvad*
+bleeding in mouth,Sangrado en la boca,sangrado en la boca|sangre en la boca|me sangra la boca
+tongue bleeding,Sangrado de la lengua,me sangra la lengua|sangrado de la lengua
+change in skin mole size or color,Cambio en un lunar,lunar cambió|lunar creció|cambio en un lunar
+penis redness,Pene rojo,pene rojo|enrojecimiento del pene
+penile discharge,Secreción del pene,secreción del pene|sale pus del pene|me sale líquido del pene
+shoulder lump or mass,Bulto en el hombro,bulto en el hombro
+polyuria,Orinar en exceso,orino demasiado|orino en exceso|orino mucho|poliuria
+cloudy eye,Visión nublada,ojo nublado|vista nublada|veo nublado|visión borrosa|veo borroso
+hysterical behavior,Conducta histérica,histéri*
+arm lump or mass,Bulto en el brazo,bulto en el brazo
+nightmares,Pesadillas,pesadilla*
+bleeding gums,Encías sangrantes,me sangran las encías|encías sangrantes|sangrado de encías
+pain in gums,Dolor en las encías,dolor en las encías|encías adoloridas
+bedwetting,Moja la cama,moja la cama|mojo la cama|se orina en la cama
+diaper rash,Rozadura de pañal,rozadura*|pañalitis
+lump or mass of breast,Bulto en el seno,bulto en el seno|bolita en el seno|bulto en la mama
+vaginal bleeding after menopause,Sangrado después de la menopausia,sangrado después de la menopausia|sangro después de la menopausia
+infrequent menstruation,Regla poco frecuente,regla poco frecuente|me baja cada varios meses
+mass on vulva,Bulto en la vulva,bulto en la vulva
+jaw pain,Dolor de mandíbula,dolor de mandíbula|dolor de quijada|me duele la mandíbula|me duele la quijada
+itching of scrotum,Comezón en el escroto,comezón en el escroto|me pican los testículos
+postpartum problems of the breast,Problemas de senos después del parto,mastitis|problemas para amamantar
+eyelid retracted,Párpado retraído,párpado retraído|ojos saltones
+hesitancy,Dificultad para iniciar la orina,me cuesta empezar a orinar|chorro débil|dificultad para empezar a orinar
+elbow lump or mass,Bulto en el codo,bulto en el codo
+muscle weakness,Debilidad muscular,debilidad muscular|músculos débiles
+throat redness,Garganta roja,garganta roja|garganta enrojecida
+joint swelling,Articulaciones hinchadas,articulaciones hinchadas|coyunturas hinchadas|articulación inflamada
+tongue pain,Dolor de lengua,dolor de lengua|me duele la lengua
+redness in or around nose,Nariz roja,nariz roja|enrojecimiento de la nariz
+wrinkles on skin,Arrugas,arruga*
+foot or toe weakness,Debilidad en el pie,pie débil|debilidad en el pie
+hand or finger cramps or spasms,Calambres en la mano,calambre en la mano|calambres en los dedos
+back stiffness or tightness,Rigidez en la espalda,espalda rígida|rigidez en la espalda|espalda tensa
+wrist lump or mass,Bulto en la muñeca,bulto en la muñeca
+skin pain,Dolor en la piel,dolor en la piel|me duele la piel
+low back stiffness or tightness,Rigidez en la espalda baja,rigidez lumbar|cintura rígida
+low urine output,Orino poco,orino poco|casi no orino|poca orina
+skin on head or neck looks infected,Infección en piel de cabeza o cuello,herida infectada en la cabeza|herida infectada en el cuello
+stuttering or stammering,Tartamudeo,tartamud*
+problems with orgasm,Problemas con el orgasmo,orgasmo
+nose deformity,Nariz deforme,nariz deforme|nariz chueca|tabique desviado
+lump over jaw,Bulto en la mandíbula,bulto en la mandíbula|bulto en la quijada
+sore in nose,Llaga en la nariz,llaga en la nariz|herida en la nariz
+hip weakness,Debilidad en la cadera,cadera débil|debilidad en la cadera
+back swelling,Espalda hinchada,espalda hinchada
+ankle stiffness or tightness,Rigidez en el tobillo,tobillo rígido|rigidez en el tobillo
+ankle weakness,Debilidad en el tobillo,tobillo débil|debilidad en el tobillo
+neck weakness,Debilidad en el cuello,cuello débil|debilidad en el cuello
