@@ -22,7 +22,7 @@ Orienta, no diagnostica: toda predicción lleva el aviso de consultar a un médi
 - API real: `POST /predict` {texto, top} -> {sintomas, emergencia, aviso, posibles[{id, nombre, probabilidad}]}.
 - Expediente (esquema `db/esquema.sql`): pacientes, antecedentes (enfermedad, cirugía, alergia, hospitalización, familiar), vacunas, tratamientos, enfermedades crónicas.
 - Backend completo en `modelo/` (FastAPI + PostgreSQL): cuentas con contraseña bcrypt y sesión JWT; expediente, consultas guardadas y borrado de cuenta (en cascada) por usuario. Cada usuario solo accede a lo suyo.
-- Recuperación de contraseña con enlace de un solo uso que vence en 30 minutos. [Pendiente] No hay servidor de correo: el enlace se imprime en el log de la API.
+- Recuperación de contraseña con enlace de un solo uso (30 min) enviado por correo SMTP (Gmail con contraseña de aplicación, credenciales en `modelo/.env`). Sin SMTP configurado, el enlace se imprime en el log de la API.
 - [Pendiente] Sin límite de intentos de login.
 - Idioma: español (México). Modo oscuro único, sin modo claro (decisión del usuario).
 

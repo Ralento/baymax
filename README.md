@@ -44,10 +44,18 @@ Variables de entorno (opcionales en desarrollo):
 - `DATABASE_URL` — por defecto `postgresql://postgres@localhost/baymax`
 - `JWT_SECRET` — firma las sesiones. Si falta, se genera uno aleatorio en `modelo/.jwt_secret` (ignorado por git). **Defínelo en producción.**
 - `FRONTEND_URL` — base de los enlaces de recuperación (por defecto `http://localhost:5173`)
+- Todas pueden ir en `modelo/.env` (ver `.env.example`)
 
 Rutas principales (documentación completa en `/docs`): `POST /auth/registro`, `POST /auth/login`, `GET /expediente`, `PUT /expediente/paciente`, `POST|PUT|DELETE /expediente/{antecedentes|vacunas|tratamientos|cronicas|consultas}`, `POST /predict`.
 
-**Recuperar contraseña:** aún no hay servidor de correo; el enlace de recuperación se imprime en la consola de la API (`uvicorn`). Para producción, sustituir ese `log.warning` en `modelo/auth.py` por el envío del correo.
+## Correo de recuperación de contraseña (Gmail)
+La API envía el enlace de recuperación por SMTP (`modelo/correo.py`, sin dependencias nuevas). Para activarlo:
+1. En tu cuenta de Google activa la **verificación en 2 pasos**.
+2. Crea una **contraseña de aplicación** en https://myaccount.google.com/apppasswords (16 letras; no es tu contraseña normal).
+3. Copia `modelo/.env.example` como `modelo/.env` y llena `SMTP_USER` y `SMTP_PASSWORD`. El `.env` está ignorado por git.
+4. Reinicia la API y prueba el envío: `cd modelo && ..\.venv\Scripts\python.exe probar_correo.py tucorreo@gmail.com`
+
+Sin `SMTP_USER`/`SMTP_PASSWORD` (desarrollo), el enlace se imprime en la consola de la API. Si el envío falla, el error queda en el log y la API responde igual: nunca revela qué correos están registrados. Gmail limita los envíos diarios; para volumen real conviene un servicio transaccional (Resend, Brevo, SendGrid) cambiando `SMTP_HOST`/`SMTP_PORT`.
 
 ## Frontend
 ```bash

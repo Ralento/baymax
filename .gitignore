@@ -10,3 +10,4 @@ node_modules/
 .impeccable/review/
 .impeccable/hook.cache.json
 .claude/
+modelo/.env

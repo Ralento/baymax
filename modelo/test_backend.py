@@ -16,6 +16,7 @@ with psycopg.connect(BASE, autocommit=True) as admin:
     admin.execute(f"DROP SCHEMA IF EXISTS {SCHEMA} CASCADE")
     admin.execute(f"CREATE SCHEMA {SCHEMA}")
 os.environ["DATABASE_URL"] = f"{BASE}?options=-csearch_path%3D{SCHEMA}"
+os.environ["SMTP_USER"] = os.environ["SMTP_PASSWORD"] = ""  # sin SMTP: el enlace sale por el log
 with psycopg.connect(os.environ["DATABASE_URL"], autocommit=True) as c:
     c.execute(ESQUEMA)
 
@@ -129,6 +130,60 @@ try:
     # Un token de sesión no sirve como token de recuperación
     sesion = ana["Authorization"].split()[1]
     assert cl.post("/auth/restablecer", json={"token": sesion, "password": "nuevaclave3"}).status_code == 401
+
+    # ---- Correo de recuperación por SMTP (simulado: no se envía nada real) ----
+    import smtplib
+
+    eventos = []
+
+    class FalsoSMTP:
+        falla = False
+
+        def __init__(self, host, puerto, timeout=None, context=None):
+            eventos.append(("conexion", host, puerto))
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *a):
+            return False
+
+        def starttls(self, context=None):
+            eventos.append(("starttls",))
+
+        def login(self, usuario, clave):
+            if FalsoSMTP.falla:
+                raise smtplib.SMTPAuthenticationError(535, b"credenciales incorrectas")
+            eventos.append(("login", usuario, clave))
+
+        def send_message(self, mensaje):
+            eventos.append(("mensaje", mensaje))
+
+    smtplib.SMTP = FalsoSMTP
+    os.environ["SMTP_USER"] = "baymax.prueba@gmail.com"
+    os.environ["SMTP_PASSWORD"] = "abcd efgh ijkl mnop"  # Google la entrega con espacios
+
+    r_si = cl.post("/auth/recuperar", json={"email": "ana@correo.com"})
+    assert r_si.status_code == 202
+    assert ("conexion", "smtp.gmail.com", 587) in eventos and ("starttls",) in eventos
+    assert ("login", "baymax.prueba@gmail.com", "abcdefghijklmnop") in eventos  # sin espacios
+    msg = next(e[1] for e in eventos if e[0] == "mensaje")
+    assert msg["To"] == "ana@correo.com" and "Baymax" in msg["From"] and "Restablece" in msg["Subject"]
+    texto = msg.get_body(preferencelist=("plain",)).get_content()
+    html = msg.get_body(preferencelist=("html",)).get_content()
+    assert "/restablecer?token=" in texto and "/restablecer?token=" in html
+    token2 = texto.split("token=")[1].split()[0]
+    assert cl.post("/auth/restablecer", json={"token": token2, "password": "nuevaclave1"}).status_code == 204  # el enlace del correo funciona
+
+    antes = len(eventos)
+    r_no = cl.post("/auth/recuperar", json={"email": "nadie@correo.com"})
+    assert len(eventos) == antes  # cuenta inexistente: no se manda nada...
+    assert (r_no.status_code, r_no.json()) == (r_si.status_code, r_si.json())  # ...y la respuesta es idéntica
+
+    FalsoSMTP.falla = True  # Gmail rechaza las credenciales: la API no debe romperse ni delatar nada
+    r_falla = cl.post("/auth/recuperar", json={"email": "ana@correo.com"})
+    assert (r_falla.status_code, r_falla.json()) == (r_si.status_code, r_si.json())
+    os.environ["SMTP_USER"] = os.environ["SMTP_PASSWORD"] = ""
 
     # ---- Renombrar y eliminar cuenta ----
     assert cl.patch("/auth/yo", json={"nombre": "Ana María"}, headers=ana).json()["nombre"] == "Ana María"

@@ -1,6 +1,7 @@
 """Conexión a PostgreSQL. La URL sale de DATABASE_URL (por defecto, la base local de desarrollo)."""
 import os
 
+import config  # noqa: F401
 import psycopg
 from psycopg.rows import dict_row
 

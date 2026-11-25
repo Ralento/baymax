@@ -1,4 +1,5 @@
 """API de Baymax. Arrancar desde modelo/: uvicorn api:app --reload"""
+import config  # noqa: F401  (carga modelo/.env antes que todo lo demás)
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
 

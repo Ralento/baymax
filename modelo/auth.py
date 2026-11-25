@@ -7,8 +7,10 @@ import time
 from pathlib import Path
 
 import bcrypt
+import config  # noqa: F401  (carga modelo/.env: el secreto y el SMTP salen de ahí)
+import correo
 import jwt
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException
 from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from psycopg import errors
 from pydantic import BaseModel, Field, field_validator
@@ -202,18 +204,23 @@ def eliminar(d: SoloPassword, u=Depends(usuario_actual), conn=Depends(conexion))
 
 
 @router.post("/recuperar", status_code=202)
-def recuperar(d: PedirReset, conn=Depends(conexion)):
-    """Genera un enlace de un solo uso. Aún no hay servidor de correo: el enlace se imprime en el log de la API.
+def recuperar(d: PedirReset, fondo: BackgroundTasks, conn=Depends(conexion)):
+    """Genera un enlace de un solo uso y lo envía por correo (SMTP, ver correo.py).
 
     Siempre responde igual, exista o no la cuenta, para no revelar qué correos están registrados.
-    Para producción, sustituir el log.warning por el envío del correo.
+    El envío va en segundo plano para que la respuesta tarde lo mismo en ambos casos. Sin SMTP
+    configurado (desarrollo), el enlace se imprime en el log de la API.
     """
     u = conn.execute("SELECT id, password_hash FROM usuarios WHERE email = %s", (d.email.strip().lower(),)).fetchone()
     if u:
         # `h` ata el token al hash actual: al cambiar la contraseña, el enlace deja de servir (un solo uso).
         token = crear_token(u["id"], "reset", RESET_MINUTOS * 60, {"h": u["password_hash"][-16:]})
-        log.warning("Enlace de recuperación para %s: %s/restablecer?token=%s", d.email, FRONTEND, token)
-    return {"mensaje": "Si existe una cuenta con ese correo, se generó un enlace para restablecer la contraseña."}
+        enlace = f"{FRONTEND}/restablecer?token={token}"
+        if correo.configurado():
+            fondo.add_task(correo.enviar_recuperacion, d.email.strip().lower(), enlace, RESET_MINUTOS)
+        else:
+            log.warning("SMTP sin configurar; enlace de recuperación para %s: %s", d.email, enlace)
+    return {"mensaje": "Si existe una cuenta con ese correo, te enviamos un enlace para restablecer la contraseña."}
 
 
 @router.post("/restablecer", status_code=204)

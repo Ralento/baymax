@@ -174,7 +174,7 @@ export function Recuperar() {
     >
       {listo ? (
         <Notice tone="ok" title="Revisa tu correo">
-          Si existe una cuenta con ese correo, se generó un enlace para restablecer la contraseña. Vence en 30 minutos y solo se puede usar una vez.
+          Si existe una cuenta con ese correo, te enviamos un enlace para restablecer la contraseña. Vence en 30 minutos y solo se puede usar una vez. Si no lo ves, revisa la carpeta de spam.
         </Notice>
       ) : (
         <form onSubmit={enviar} noValidate>
