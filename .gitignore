@@ -3,3 +3,10 @@
 __pycache__/
 # 182 MB, pasa el límite de GitHub (100 MB). Ver README para descargarlo.
 datos/*.csv
+modelo/.jwt_secret
+node_modules/
+
+# Material de trabajo de herramientas de diseño y configuración local de Claude Code
+.impeccable/review/
+.impeccable/hook.cache.json
+.claude/
