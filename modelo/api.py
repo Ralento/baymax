@@ -2,9 +2,13 @@
 from fastapi import FastAPI
 from pydantic import BaseModel, Field
 
+import auth
+import expediente
 from baymax import predecir
 
-app = FastAPI(title="Baymax", description="Orientación médica por síntomas. No es un diagnóstico.")
+app = FastAPI(title="Baymax", description="Orientación médica por síntomas y expediente. No es un diagnóstico.")
+app.include_router(auth.router)
+app.include_router(expediente.router)
 
 
 class Consulta(BaseModel):

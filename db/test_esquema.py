@@ -16,9 +16,12 @@ with psycopg.connect(URL) as conn:
     cur.execute("CREATE SCHEMA prueba; SET LOCAL search_path TO prueba")  # aislado de las tablas reales
     cur.execute(ESQUEMA)
 
+    cur.execute("INSERT INTO usuarios (email, nombre, password_hash) VALUES ('ana@correo.com', 'Ana Gómez', 'hash') RETURNING id")
+    uid = cur.fetchone()[0]
     cur.execute(
-        "INSERT INTO pacientes (curp, nombre, fecha_nacimiento, sexo, tipo_sangre)"
-        " VALUES ('GOMA900101HDFRRN09', 'Ana Gómez', '1990-01-01', 'F', 'O+') RETURNING id"
+        "INSERT INTO pacientes (usuario_id, curp, nombre, fecha_nacimiento, sexo, tipo_sangre)"
+        " VALUES (%s, 'GOMA900101HDFRRN09', 'Ana Gómez', '1990-01-01', 'F', 'O+') RETURNING id",
+        (uid,),
     )
     pid = cur.fetchone()[0]
     cur.execute("INSERT INTO antecedentes (paciente_id, tipo, descripcion) VALUES (%s, 'alergia', 'Penicilina')", (pid,))
@@ -26,20 +29,27 @@ with psycopg.connect(URL) as conn:
     cur.execute("INSERT INTO tratamientos (paciente_id, medicamento, fecha_inicio) VALUES (%s, 'Metformina', '2024-03-01')", (pid,))
     cur.execute("INSERT INTO enfermedades_cronicas (paciente_id, enfermedad) VALUES (%s, 'Diabetes tipo 2')", (pid,))
 
-    TABLAS = ["antecedentes", "vacunas", "tratamientos", "enfermedades_cronicas"]
+    cur.execute("INSERT INTO consultas (paciente_id, texto) VALUES (%s, 'tos')", (pid,))
+
+    TABLAS = ["antecedentes", "vacunas", "tratamientos", "enfermedades_cronicas", "consultas"]
 
     def filas_del_paciente():
         return [cur.execute(f"SELECT count(*) FROM {t} WHERE paciente_id = %s", (pid,)).fetchone()[0] for t in TABLAS]
 
-    assert filas_del_paciente() == [1, 1, 1, 1]
+    assert filas_del_paciente() == [1, 1, 1, 1, 1]
+
+    cur.execute("INSERT INTO usuarios (email, nombre, password_hash) VALUES ('luis@correo.com', 'Luis', 'hash') RETURNING id")
+    uid2 = cur.fetchone()[0]
 
     # La base debe rechazar datos inválidos.
     INVALIDOS = [
-        ("INSERT INTO pacientes (nombre, fecha_nacimiento, sexo) VALUES ('X', '2000-01-01', 'Z')", errors.CheckViolation),
-        ("INSERT INTO pacientes (nombre, fecha_nacimiento, sexo, tipo_sangre) VALUES ('X', '2000-01-01', 'F', 'C+')", errors.CheckViolation),
-        ("INSERT INTO pacientes (nombre, fecha_nacimiento, sexo, curp) VALUES ('X', '2000-01-01', 'F', 'corto')", errors.CheckViolation),
-        ("INSERT INTO pacientes (nombre, fecha_nacimiento, sexo) VALUES ('', '2000-01-01', 'F')", errors.CheckViolation),
-        ("INSERT INTO pacientes (nombre, fecha_nacimiento, sexo, curp) VALUES ('X', '2000-01-01', 'F', 'GOMA900101HDFRRN09')", errors.UniqueViolation),
+        (f"INSERT INTO pacientes (usuario_id, nombre, sexo) VALUES ({uid2}, 'X', 'Z')", errors.CheckViolation),
+        (f"INSERT INTO pacientes (usuario_id, nombre, sexo, tipo_sangre) VALUES ({uid2}, 'X', 'F', 'C+')", errors.CheckViolation),
+        (f"INSERT INTO pacientes (usuario_id, nombre, sexo, curp) VALUES ({uid2}, 'X', 'F', 'corto')", errors.CheckViolation),
+        (f"INSERT INTO pacientes (usuario_id, nombre, sexo) VALUES ({uid2}, '', 'F')", errors.CheckViolation),
+        (f"INSERT INTO pacientes (usuario_id, nombre, sexo, curp) VALUES ({uid2}, 'X', 'F', 'GOMA900101HDFRRN09')", errors.UniqueViolation),
+        (f"INSERT INTO pacientes (usuario_id, nombre) VALUES ({uid}, 'otro expediente del mismo usuario')", errors.UniqueViolation),
+        ("INSERT INTO usuarios (email, nombre, password_hash) VALUES ('Mayus@correo.com', 'X', 'h')", errors.CheckViolation),
         (f"INSERT INTO tratamientos (paciente_id, medicamento, fecha_inicio, fecha_fin) VALUES ({pid}, 'X', '2024-03-01', '2024-01-01')", errors.CheckViolation),
         (f"INSERT INTO antecedentes (paciente_id, tipo, descripcion) VALUES ({pid}, 'otro', 'X')", errors.CheckViolation),
         ("INSERT INTO vacunas (paciente_id, vacuna, fecha_aplicacion) VALUES (999999, 'X', '2025-01-01')", errors.ForeignKeyViolation),
@@ -54,7 +64,7 @@ with psycopg.connect(URL) as conn:
 
     # Borrar al paciente borra su expediente completo.
     cur.execute("DELETE FROM pacientes WHERE id = %s", (pid,))
-    assert filas_del_paciente() == [0, 0, 0, 0]
+    assert filas_del_paciente() == [0, 0, 0, 0, 0]
 
     conn.rollback()
 print("OK: esquema")

@@ -1,11 +1,23 @@
 -- Expediente médico de Baymax. Cargar: psql -d baymax -f esquema.sql
 
+-- Cuenta de acceso. La contraseña se guarda solo como hash bcrypt, nunca en claro.
+CREATE TABLE usuarios (
+    id            bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    email         text NOT NULL UNIQUE CHECK (email = lower(email)),
+    nombre        text NOT NULL CHECK (nombre <> ''),
+    password_hash text NOT NULL,
+    creado_en     timestamptz NOT NULL DEFAULT now()
+);
+
+-- Cada usuario tiene exactamente un expediente. Se crea al registrarse, así que fecha_nacimiento y sexo
+-- pueden estar vacíos hasta que la persona complete sus datos.
 CREATE TABLE pacientes (
     id               bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    usuario_id       bigint NOT NULL UNIQUE REFERENCES usuarios ON DELETE CASCADE,
     curp             text UNIQUE CHECK (curp ~ '^[A-Z0-9]{18}$'),
     nombre           text NOT NULL CHECK (nombre <> ''),
-    fecha_nacimiento date NOT NULL,  -- "no en el futuro" se valida en la API: un CHECK con current_date rompe al restaurar respaldos
-    sexo             text NOT NULL CHECK (sexo IN ('F', 'M', 'X')),
+    fecha_nacimiento date,  -- "no en el futuro" se valida en la API: un CHECK con current_date rompe al restaurar respaldos
+    sexo             text CHECK (sexo IN ('F', 'M', 'X')),
     tipo_sangre      text CHECK (tipo_sangre IN ('A+', 'A-', 'B+', 'B-', 'AB+', 'AB-', 'O+', 'O-')),
     telefono         text,
     email            text UNIQUE,
@@ -52,8 +64,20 @@ CREATE TABLE enfermedades_cronicas (
     notas             text
 );
 
+-- Consultas de síntomas que el paciente decidió guardar.
+CREATE TABLE consultas (
+    id          bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    paciente_id bigint NOT NULL REFERENCES pacientes ON DELETE CASCADE,
+    texto       text NOT NULL CHECK (texto <> ''),
+    sintomas    text[] NOT NULL DEFAULT '{}',
+    emergencia  boolean NOT NULL DEFAULT false,
+    posibles    jsonb NOT NULL DEFAULT '[]',  -- [{"nombre": ..., "probabilidad": ...}]
+    creada_en   timestamptz NOT NULL DEFAULT now()
+);
+
 -- PostgreSQL no indexa las llaves foráneas solo; el expediente siempre se consulta por paciente.
 CREATE INDEX ON antecedentes (paciente_id);
 CREATE INDEX ON vacunas (paciente_id);
 CREATE INDEX ON tratamientos (paciente_id);
 CREATE INDEX ON enfermedades_cronicas (paciente_id);
+CREATE INDEX ON consultas (paciente_id);

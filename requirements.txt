@@ -5,3 +5,5 @@ fastapi
 uvicorn
 httpx
 psycopg[binary]
+bcrypt
+PyJWT
